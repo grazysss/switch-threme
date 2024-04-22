@@ -1,0 +1,90 @@
+body {
+    background-color: var(--bg-color);
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+/* .container {
+    margin-top: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+} */
+
+.root {
+   --bg-color: #1E1E1E;
+   --switch: url(./img/lua.svg);
+   --ball-position: 8px 15px 0px 142px;
+   --pdd-icon: 4px 4px 4px 15px;
+   --animation-keyframe: slide-in 0.4s forwards;
+}
+
+.light {
+    --bg-color: #F1F1F1;
+    --switch: url(./img/sol.svg);
+    --ball-position: 8px 4px 4px 15px;
+    --pdd-icon: 8px 0px 0px 276px;
+    --animation-keyframe: slide-out 0.2s;
+}
+
+.container {
+    margin: 290px 720px 0px 688px;
+    border: 2px;
+
+    position: relative;
+    transform: translateY(-25%);
+}
+
+.switch {
+    display: flex;  
+    flex-wrap: nowrap;
+    position: relative;
+    filter: drop-shadow(2px, 5px, 600px black);
+}
+
+.icon {
+   /*  margin: 0px;
+    padding: 0px; */
+    padding: var(--pdd-icon);
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    background: var(--switch) no-repeat center;
+}
+
+/* button {
+    width: 218px;
+    height: 86px;
+    visibility: hidden;
+} */
+
+.ball {
+    position: absolute;
+    padding: var(--ball-position);
+    animation: var(--animation-keyframe);
+}
+
+@keyframes slide-in {
+    from {
+       right: 50%;
+    }
+    
+    to {
+       right: 0%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+       right: 0%;
+    }
+    
+    to {
+       right: 50%;
+    }
+}
+
+/* Aprendizado: Padding is top, right, end and left;
+Container para alinhar boxes/divs. */
